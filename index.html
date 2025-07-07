@@ -1,44 +1,52 @@
-<!DOCTYPE html>
-<html lang="id">
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portofolio Tammam Azzakiy</title>
-  <link rel="stylesheet" href="style.css">
+  <title>ESP32 AI Client</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 30px; }
+    video { border: 2px solid #333; }
+    button { padding: 10px 20px; margin-top: 10px; font-size: 16px; }
+    #result { margin-top: 10px; font-size: 18px; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="profile-container">
-      <img src="images/profile.jpg" alt="Foto Profil" class="profile-img">
-      <h1>Tammam Azzakiy</h1>
-      <p>Informatics Student | Programmer | Tech Enthusiast</p>
-    </div>
-  </header>
+  <h2>ESP32 AI Client</h2>
+  <div id="webcam"></div>
+  <div>
+    <button id="predictButton">Predict & Send to ESP32</button>
+  </div>
+  <div id="result">Result: -</div>
 
-  <main>
-    <section id="tentang">
-      <h2>Tentang Saya</h2>
-      <p>Saya adalah mahasiswa Informatika yang tertarik pada pengembangan perangkat lunak, AI, dan teknologi edukatif. Saya senang membangun solusi kreatif dan efisien.</p>
-    </section>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
 
-    <section id="proyek">
-      <h2>Proyek</h2>
-      <ul>
-        <li><strong>Aplikasi AR Edukasi Bangun Ruang</strong> – Unity & Android</li>
-        <li><strong>Robot AI Vision</strong> – ESP32 & Teachable Machine</li>
-        <li><strong>Sistem Reservasi GOR</strong> – C++ & MySQL</li>
-      </ul>
-    </section>
+</body>
+</html> -->
 
-    <section id="kontak">
-      <h2>Kontak</h2>
-      <p>Email: <a href="mailto:tamamgreget123@example.com">tamamgreget123@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/tammam">github.com/Zacky00</a></p>
-    </section>
-  </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ESP32 AI Client</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 40px; }
+    #webcam-container canvas { border: 2px solid #333; }
+    button { padding: 10px 20px; margin: 10px; font-size: 16px; }
+    #result, #status { margin-top: 20px; font-weight: bold; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h2>ESP32 AI Client</h2>
+  <button id="cameraButton">Izinkan Kamera</button>
+  <div id="status">Status: Kamera belum dimulai</div>
+  <div id="webcam-container"></div>
+  <button id="predictButton" disabled>Prediksi & Kirim ke ESP32</button>
+  <div id="result">Result: -</div>
 
-  <footer>
-    <p>&copy; 2025 Tammam Azzakiy. All rights reserved.</p>
-  </footer>
+  <!-- Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
